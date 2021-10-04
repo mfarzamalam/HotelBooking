@@ -44,6 +44,7 @@ class HotelDetail(View):
         return render(request, 'app/hoteldetail.html', context)
 
 
+@login_required
 def add_to_cart(request):
     user     = request.user
     hotel_pk = request.GET.get('hotel_pk')
